@@ -1,6 +1,6 @@
 # Privacy Index Linux v3.4
 
-Small local audit tool for Debian/Ubuntu-like, Kali and Arch-like Linux systems.
+Small local audit tool for Debian/Ubuntu-like Linux systems.
 
 It produces three scores out of 20:
 
