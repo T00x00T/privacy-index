@@ -25,7 +25,33 @@ python3 -m privacy_index --lang en --verbose
 python3 -m privacy_index --lang fr --verbose
 python3 -m privacy_index --lang de --verbose
 ```
+Commands :
+```bash
 
+usage: privacy-index [-h] [--json JSON_PATH] [--csv CSV_PATH] [--no-color] [--verbose] [--debug-facts] [--browser-tests] [--test-browser TEST_BROWSER] [--yes] [--lang {fr,en,de}]
+                     [--no-lang-prompt] [--no-sudo] [--investigate-port INVESTIGATE_PORT] [--investigate-proto {udp,tcp}]
+
+Local Linux privacy, anonymity and hardening audit.
+
+options:
+  -h, --help            show this help message and exit
+  --json JSON_PATH      Export the JSON report to this file
+  --csv CSV_PATH        Export CSV results to this file
+  --no-color            Disable ANSI colors
+  --verbose, -v         Show detailed explanations and remediation hints
+  --debug-facts         Show raw detected facts to debug false positives
+  --browser-tests       Offer optional browser tests. External tests require confirmation.
+  --test-browser TEST_BROWSER
+                        Browser to use for tests: firefox, librewolf, mullvad, brave, chromium, default, etc.
+  --yes                 Answer yes to optional browser-test confirmations.
+  --lang {fr,en,de}     Interface language: fr, en or de. If omitted, the app asks in English.
+  --no-lang-prompt      Use English without asking for the interface language.
+  --no-sudo             Do not ask for sudo. Some root-owned listening processes may remain unknown.
+  --investigate-port INVESTIGATE_PORT
+                        Run a focused extended ss investigation for one listening port, then exit.
+  --investigate-proto {udp,tcp}
+                        Protocol for --investigate-port. Default: udp.
+```
 Export:
 
 ```bash
