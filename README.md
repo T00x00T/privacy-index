@@ -42,6 +42,7 @@ python3 -m privacy_index --lang en --browser-tests --test-browser chromium
 AppImage :
 
 chmod +x PrivacyIndex-v3.4-x86_64.AppImage
+
 sudo ./PrivacyIndex-v3.4-x86_64.AppImage --lang en --verbose
 
 ## Dependencies
