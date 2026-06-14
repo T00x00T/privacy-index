@@ -143,7 +143,7 @@ python3 -m privacy_index --lang fr --investigate-port 54449 --investigate-proto 
 Standalone HTML/JS cannot perform the full local audit because a browser page cannot run `ss`, `dpkg`, `pacman`, `resolvectl`, inspect `/proc`, read arbitrary browser profiles or enumerate system services. A web UI is still useful as a report viewer or browser self-test page, but the real Linux scanner needs a backend such as Python, Bash, Node/Electron, Tauri, or a packaged AppImage.
 
 ## Output sample on test computer
-
+```bash
  sudo python3 -m privacy_index --lang en --verbose                                                                                                                                    
 
 Privacy Index Linux v3.4
@@ -372,4 +372,4 @@ Scan confidence : high
 ┃              ┃ solution : List human users, then use chmod 700 $HOME if needed. Be careful with intentionally shared folders.          ┃
 ┃              ┃ learn more : https://wiki.archlinux.org/title/File_permissions_and_attributes                                           ┃
 ┗━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-
+```
