@@ -1,0 +1,349 @@
+{
+  "schema_version": 1,
+  "updated_for_app": "2.9",
+  "notes": "Local, conservative DNS provider database. Exact IP matches are used first. PTR/hostname must remain decorative, never decisive for scoring. Provider IPs can change; unknown is safer than overclaiming.",
+  "classes": {
+    "privacy_public": "Public resolver generally more coherent with a privacy-oriented posture than advertising/search-engine DNS.",
+    "privacy_filtering": "Privacy/security-oriented resolver with filtering variants.",
+    "privacy_configurable": "Configurable resolver; privacy posture depends on the user's account/configuration.",
+    "privacy_public_vpn": "Public DNS operated by a VPN/privacy provider.",
+    "vpn_provider_dns": "DNS endpoint operated by a VPN provider or commonly pushed inside its tunnel.",
+    "mixed_public": "Technically good resolver, but use as a third-party trust point should be mentioned in strict privacy mode.",
+    "avoid_public": "Resolver not coherent with strict metadata minimization/privacy posture.",
+    "deprecated": "Resolver/service considered stale, discontinued, or unsuitable for new recommendations."
+  },
+  "exact": {
+    "9.9.9.9": {
+      "name": "Quad9",
+      "class": "privacy_public"
+    },
+    "149.112.112.112": {
+      "name": "Quad9",
+      "class": "privacy_public"
+    },
+    "2620:fe::fe": {
+      "name": "Quad9",
+      "class": "privacy_public"
+    },
+    "2620:fe::9": {
+      "name": "Quad9",
+      "class": "privacy_public"
+    },
+    "9.9.9.10": {
+      "name": "Quad9 unsecured",
+      "class": "privacy_public"
+    },
+    "149.112.112.10": {
+      "name": "Quad9 unsecured",
+      "class": "privacy_public"
+    },
+    "2620:fe::10": {
+      "name": "Quad9 unsecured",
+      "class": "privacy_public"
+    },
+    "2620:fe::fe:10": {
+      "name": "Quad9 unsecured",
+      "class": "privacy_public"
+    },
+    "9.9.9.11": {
+      "name": "Quad9 ECS",
+      "class": "mixed_public"
+    },
+    "149.112.112.11": {
+      "name": "Quad9 ECS",
+      "class": "mixed_public"
+    },
+    "194.242.2.2": {
+      "name": "Mullvad DNS",
+      "class": "privacy_public_vpn"
+    },
+    "194.242.2.3": {
+      "name": "Mullvad DNS",
+      "class": "privacy_public_vpn"
+    },
+    "194.242.2.4": {
+      "name": "Mullvad DNS",
+      "class": "privacy_public_vpn"
+    },
+    "194.242.2.5": {
+      "name": "Mullvad DNS",
+      "class": "privacy_public_vpn"
+    },
+    "2a07:e340::2": {
+      "name": "Mullvad DNS",
+      "class": "privacy_public_vpn"
+    },
+    "2a07:e340::3": {
+      "name": "Mullvad DNS",
+      "class": "privacy_public_vpn"
+    },
+    "2a07:e340::4": {
+      "name": "Mullvad DNS",
+      "class": "privacy_public_vpn"
+    },
+    "2a07:e340::5": {
+      "name": "Mullvad DNS",
+      "class": "privacy_public_vpn"
+    },
+    "103.86.96.100": {
+      "name": "NordVPN DNS",
+      "class": "vpn_provider_dns"
+    },
+    "103.86.99.100": {
+      "name": "NordVPN DNS",
+      "class": "vpn_provider_dns"
+    },
+    "172.16.0.1": {
+      "name": "IVPN WireGuard DNS",
+      "class": "vpn_provider_dns"
+    },
+    "10.0.254.1": {
+      "name": "IVPN OpenVPN DNS",
+      "class": "vpn_provider_dns"
+    },
+    "94.140.14.14": {
+      "name": "AdGuard DNS",
+      "class": "privacy_filtering"
+    },
+    "94.140.15.15": {
+      "name": "AdGuard DNS",
+      "class": "privacy_filtering"
+    },
+    "94.140.14.15": {
+      "name": "AdGuard DNS Family",
+      "class": "privacy_filtering"
+    },
+    "94.140.15.16": {
+      "name": "AdGuard DNS Family",
+      "class": "privacy_filtering"
+    },
+    "94.140.14.140": {
+      "name": "AdGuard DNS non-filtering",
+      "class": "privacy_public"
+    },
+    "94.140.15.140": {
+      "name": "AdGuard DNS non-filtering",
+      "class": "privacy_public"
+    },
+    "2a10:50c0::ad1:ff": {
+      "name": "AdGuard DNS",
+      "class": "privacy_filtering"
+    },
+    "2a10:50c0::ad2:ff": {
+      "name": "AdGuard DNS",
+      "class": "privacy_filtering"
+    },
+    "2a10:50c0::bad1:ff": {
+      "name": "AdGuard DNS Family",
+      "class": "privacy_filtering"
+    },
+    "2a10:50c0::bad2:ff": {
+      "name": "AdGuard DNS Family",
+      "class": "privacy_filtering"
+    },
+    "45.90.28.0": {
+      "name": "NextDNS",
+      "class": "privacy_configurable"
+    },
+    "45.90.30.0": {
+      "name": "NextDNS",
+      "class": "privacy_configurable"
+    },
+    "2a07:a8c0::": {
+      "name": "NextDNS",
+      "class": "privacy_configurable"
+    },
+    "2a07:a8c1::": {
+      "name": "NextDNS",
+      "class": "privacy_configurable"
+    },
+    "76.76.2.0": {
+      "name": "Control D",
+      "class": "privacy_configurable"
+    },
+    "76.76.10.0": {
+      "name": "Control D",
+      "class": "privacy_configurable"
+    },
+    "76.76.2.1": {
+      "name": "Control D malware filter",
+      "class": "privacy_filtering"
+    },
+    "76.76.10.1": {
+      "name": "Control D malware filter",
+      "class": "privacy_filtering"
+    },
+    "2606:1a40::": {
+      "name": "Control D",
+      "class": "privacy_configurable"
+    },
+    "2606:1a40:1::": {
+      "name": "Control D",
+      "class": "privacy_configurable"
+    },
+    "185.228.168.9": {
+      "name": "CleanBrowsing Security",
+      "class": "privacy_filtering"
+    },
+    "185.228.169.9": {
+      "name": "CleanBrowsing Security",
+      "class": "privacy_filtering"
+    },
+    "185.228.168.10": {
+      "name": "CleanBrowsing Adult",
+      "class": "privacy_filtering"
+    },
+    "185.228.169.11": {
+      "name": "CleanBrowsing Family",
+      "class": "privacy_filtering"
+    },
+    "86.54.11.1": {
+      "name": "DNS4EU",
+      "class": "privacy_public"
+    },
+    "86.54.11.100": {
+      "name": "DNS4EU",
+      "class": "privacy_public"
+    },
+    "1.1.1.1": {
+      "name": "Cloudflare",
+      "class": "mixed_public"
+    },
+    "1.0.0.1": {
+      "name": "Cloudflare",
+      "class": "mixed_public"
+    },
+    "1.1.1.2": {
+      "name": "Cloudflare malware filter",
+      "class": "mixed_public"
+    },
+    "1.0.0.2": {
+      "name": "Cloudflare malware filter",
+      "class": "mixed_public"
+    },
+    "1.1.1.3": {
+      "name": "Cloudflare family filter",
+      "class": "mixed_public"
+    },
+    "1.0.0.3": {
+      "name": "Cloudflare family filter",
+      "class": "mixed_public"
+    },
+    "2606:4700:4700::1111": {
+      "name": "Cloudflare",
+      "class": "mixed_public"
+    },
+    "2606:4700:4700::1001": {
+      "name": "Cloudflare",
+      "class": "mixed_public"
+    },
+    "2606:4700:4700::1112": {
+      "name": "Cloudflare malware filter",
+      "class": "mixed_public"
+    },
+    "2606:4700:4700::1002": {
+      "name": "Cloudflare malware filter",
+      "class": "mixed_public"
+    },
+    "2606:4700:4700::1113": {
+      "name": "Cloudflare family filter",
+      "class": "mixed_public"
+    },
+    "2606:4700:4700::1003": {
+      "name": "Cloudflare family filter",
+      "class": "mixed_public"
+    },
+    "208.67.222.222": {
+      "name": "OpenDNS/Cisco",
+      "class": "mixed_public"
+    },
+    "208.67.220.220": {
+      "name": "OpenDNS/Cisco",
+      "class": "mixed_public"
+    },
+    "2620:119:35::35": {
+      "name": "OpenDNS/Cisco",
+      "class": "mixed_public"
+    },
+    "2620:119:53::53": {
+      "name": "OpenDNS/Cisco",
+      "class": "mixed_public"
+    },
+    "8.8.8.8": {
+      "name": "Google Public DNS",
+      "class": "avoid_public"
+    },
+    "8.8.4.4": {
+      "name": "Google Public DNS",
+      "class": "avoid_public"
+    },
+    "2001:4860:4860::8888": {
+      "name": "Google Public DNS",
+      "class": "avoid_public"
+    },
+    "2001:4860:4860::8844": {
+      "name": "Google Public DNS",
+      "class": "avoid_public"
+    },
+    "77.88.8.8": {
+      "name": "Yandex DNS",
+      "class": "avoid_public"
+    },
+    "77.88.8.1": {
+      "name": "Yandex DNS",
+      "class": "avoid_public"
+    },
+    "77.88.8.88": {
+      "name": "Yandex DNS family",
+      "class": "avoid_public"
+    },
+    "77.88.8.7": {
+      "name": "Yandex DNS family",
+      "class": "avoid_public"
+    },
+    "180.76.76.76": {
+      "name": "Baidu DNS",
+      "class": "avoid_public"
+    },
+    "193.110.81.0": {
+      "name": "dns0.eu discontinued",
+      "class": "deprecated"
+    },
+    "185.253.5.0": {
+      "name": "dns0.eu discontinued",
+      "class": "deprecated"
+    }
+  },
+  "private_ranges": [
+    {
+      "cidr": "10.255.255.0/24",
+      "name": "Windscribe internal DNS",
+      "class": "vpn_provider_dns"
+    },
+    {
+      "cidr": "10.64.0.0/10",
+      "name": "VPN/CGNAT private DNS range",
+      "class": "vpn_or_private"
+    },
+    {
+      "cidr": "100.64.0.0/10",
+      "name": "CGNAT/VPN private DNS range",
+      "class": "vpn_or_private"
+    }
+  ],
+  "interface_hints": {
+    "nord": "NordVPN internal DNS",
+    "nordlynx": "NordVPN internal DNS",
+    "mullvad": "Mullvad VPN internal DNS",
+    "proton": "Proton VPN internal DNS",
+    "protonvpn": "Proton VPN internal DNS",
+    "ivpn": "IVPN internal DNS",
+    "wg": "WireGuard/VPN internal DNS",
+    "tun": "TUN/VPN internal DNS",
+    "tap": "TAP/VPN internal DNS",
+    "amnezia": "Amnezia VPN internal DNS",
+    "awg": "AmneziaWG internal DNS",
+    "nym": "NymVPN internal DNS",
+    "nymvpn": "NymVPN internal DNS"
+  }
+}
