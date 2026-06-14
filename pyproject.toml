@@ -1,0 +1,13 @@
+[project]
+name = "privacy-index-linux"
+version = "3.4.0"
+description = "Local Linux privacy, anonymity and hardening audit"
+requires-python = ">=3.10"
+authors = [{name = "Privacy Index Project"}]
+license = {text = "MIT"}
+
+[project.scripts]
+privacy-index = "privacy_index.main:main"
+
+[tool.setuptools.package-data]
+privacy_index = ["data/*.json"]
