@@ -10,6 +10,12 @@ It produces three scores out of 20:
 
 The normal scan does not contact external servers. It does not read browser history, bookmarks, emails or personal documents.
 
+## Limits
+
+The score is not a certification of security or anonymity. It represents a local, weighted and improvable reading of certain technical signals.
+Each user can adapt the criteria, weightings and local databases according to their own threat model.
+
+
 ## Run
 
 By default, the application asks for the language in English. Pressing Enter selects English.
